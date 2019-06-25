@@ -2,6 +2,12 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+    <title>About Us</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
 <style>
   body {
     font-family: Arial, Helvetica, sans-serif;
@@ -178,8 +184,211 @@ body {
   margin-top: 0;
 }
 
+.slider 
+{ 
+    width: 100%;
+    height: 630px;
+    background-image: url(https://i.imgur.com/e4GbH5M.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+
+}
+
+.slider .title{
+    width: 40%;
+    height: auto;
+    position: absolute;
+    left: 18.5%; 
+}
+
+.slider .title h1{
+    font-size: 87px;
+    color: #ffffff00;
+    line-height: 65px;
+}
+
+.slider .title h1 span {
+    color: #001380 !important;
+}
+
+.slider .title p{
+    font-size: 52px;
+    color: rgb(3, 0, 0);
+    line-height: 1.5;
+    margin-top: 15px;
+    padding-right: 20px;
+}
+
+.slider .title h2{
+    padding-top: 70px;
+    font-size: 87px;
+    color: #ffffff00;
+    line-height: 65px;
+}
+
+.middle-container{
+    margin-top: 80px;
+    clear: both;
+    flex-direction: left;
+}
+
+.main .middle-container .middle-item{
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+    margin-left: 46px;
+}
+
+.main .middle-container .middle-item h5{
+    font-size: 28px;
+    letter-spacing: 1px;
+    margin: 20px 0px;
+}
+
+.main .middle-container .middle-item p{
+    font-size: 20px;
+    color:  #727272
+}
+
+.middle-container .middle-container2{
+    float: left;
+    background-image: url(https://i.imgur.com/5AOXyKi.jpg);
+    background-size: cover;
+}
+
+.middle-item2{
+    width: 33.06%;
+    height: auto;
+    float: left;
+    padding: 0 15px;
+    padding-left: 200px;
+}
+
+.middle-item2 h6{
+    letter-spacing: 3px;
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #2f72f0; 
+}
+
+.middle-item2 h3{
+    color: #272727;
+    font-size: 40px;
+    line-height: 35px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.middle-item2 p{
+    padding-bottom: 40px;
+    color: rgb(64, 0, 107);
+    margin: 0 0 10px;
+    font-size: 25px;
+    line-height: 30px; 
+}
+
+.middle-item2 .zoom img{
+    max-width: 100%;
+}
+
+.title-line{
+    width: 30px;
+    border-bottom: 3px solid #3278fa;
+    text-align: center;
+}
+
+.margin-top{
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.para{
+    width: 83.333%;
+    padding-right: 20px;
+    padding-left: 20px;
+    float: right;
+    margin-top: 8px;
+}
+
+.margin-top-1{
+    float: left;
+    margin-top: 10px;
+    width: 100%
+}
+
+.zoom{
+    text-align: center;
+}
+
+.What-We-Do{
+    width: 100%;
+    padding: 72px 0px 72px 0px;
+    background-image: url(https://i.imgur.com/gzRqoAB.jpg);
+    background-size: cover;
+    clear: both;
+    float: left;
+}
+
+.What-We-Do .heading h2{
+    font-size: 65px;
+    line-height: 35px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #fff; 
+}
+
+.What-We-Do .heading p{
+    font-size: 30px;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 25px;
+    letter-spacing: 1.5px;
+    color: #fff;
+    padding-bottom: 30px;
+    padding-top: 20px;
+} 
+
+.What-We-Do .col-1{
+    width: 30.333%;
+    float: left;
+    padding: 0 15px;
+}
+
+.What-We-Do .col-1 img{
+    max-width: 100%;
+    display: block;
+    margin: 0 auto; 
+}
+
+.What-We-Do .col-1 .text-box{
+    padding: 10%;
+    background-color: #f3f3f3;
+    width: auto;
+    text-align: center;
+}
+.What-We-Do .col-1 .text-box{
+    margin-bottom: 9px;
+    text-transform: uppercase;
+    font-size: 22px;
+    line-height: 25px;
+    letter-spacing: 0.5px;
+}
+
+.What-We-Do .col-1 .text-box p{
+    color: #727272;
+    line-height: center;
+    text-align: center;
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+
 .footer {
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
@@ -207,11 +416,6 @@ body {
     </div>
   </navbar>
 
-  <div style="padding-left:16px">
-    <h2>Eco Warriors<i class="fa fa-registered" style="font-size: 0.4em"></i></h2>
-    <p>Welcome to the Green Team. We Reuse. We Reduce. We Recycle.</p>
-  </div>
-
   <div class="icon-bar">
     <a href="https://www.facebook.com/ecowarriors2019/" class="facebook"><i class="fa fa-facebook"></i></a>
     <a href="https://twitter.com/EcoWarriors18" class="twitter"><i class="fa fa-twitter"></i></a>
@@ -219,6 +423,98 @@ body {
     <a href="https://www.youtube.com/channel/UCE9w1KbAJZoUSx-NYKNOyfg?disable_polymer=true" class="youtube"><i class="fa fa-youtube"></i></a>
   </div>
 
+  <div class="slider">
+    <div class="title">
+        <h1><span>Eco Warrior</span></h1>
+        <p>We Reduce, Reuse and Recycle</p>
+        <h2>About Us!</h2>
+        
+    </div>
+</div>
+
+<div class="main">
+    <div class="middle-container">
+            <div class="middle-item">
+                <i><img src="https://i.imgur.com/PvZd4jc.jpg" alt="Jason" width="320" height="320"></i>
+                <h5>Jason Fung <br> The Eco Initiator</h5>
+                <p>Been travelling all over the world and would love to make the world a better place by reducing rubbish both land and sea and even sky! <br> One trash at a time</p>
+            </div>
+
+            <div class="middle-item">
+                <i><img src="https://i.imgur.com/nSS8BJd.jpg" alt="Chris" width="320" height="320"></i>
+                <h5>Chris Tan <br> The Eco Demander</h5>
+                <p>Been demanding the best for Mother Nature and all of us especially our future children! Would love to ensure the world can go for generations! <br> One step at a time</p>
+            </div>
+
+            <div class="middle-item">
+                <i><img src="https://i.imgur.com/kNOOED0.png" alt="Zhen" width="320" height="320"></i>
+                <h5>Zhen Rui <br> The Eco Lover</h5>
+                <p>Been loving the nature and its beauty since young and would love to preserve the sight for others to see! Though priceless but it is the most we need to know! <br> One scenery at a time</p>
+            </div>
+
+            <div class="middle-item">
+                <i><img src="https://i.imgur.com/EoARO8c.jpg" alt="Swadeep" width="320" height="320"></i>
+                <h5>Swadeep <br> The Eco Promoter</h5>
+                <p>Been promoting stability since University days! Hence creating products to make the world a more sustainable place and a more collaborative one to minimize waste! <br> One promotion at a time</p>
+            </div>
+            
+    </div>
+
+    <div class="middle-container">
+        <div class="middle-container2">
+        <div class="middle-item2">
+            <h6>Simplest Way To Solve Global Warming</h6>
+            <h3>Join Us! Support The Movement! Buy The Merchandise!</h3>
+            <p>You are not to small to make a difference! All you need to do now is to support this movement and go eco! <br> "If Global warming is to be stopped, It will be up to you!" <br> Imagine the world today with a much better collaboration and a much co-operative world! Saving the resources and using it at its maximum capacity without competition just inter-competition to grow and become a much better community</p>
+        </div>
+
+        <div class="middle-item2">
+            <div class="zoom">
+                <img src="https://i.imgur.com/WgMsnGO.png" alt="3R Earth" width="260" height="260">
+            </div>
+            <div class="title-line margin-top"></div>
+                <div class="para">
+                    <p class="margin-top-1">If all of us just started to reuse, reduce and recycle wonder how much rubbish and trash will be reduced? Imagine if we take it to a whole new level, producing products and making resources much more available. To not just solve the depletion of resources but also Mother Nature itself and its beauty!</p>
+                </div>
+            
+        </div>
+        </div>
+    </div>
+  
+</div>
+
+<section class="What-We-Do">
+<div class="main">
+    <div class="heading">
+        <h2>What We Do</h2>
+        <p>We create products that and events to make the world a better place whether it is through a T-shirt or Phone Case or even Shoe! <br> Everything we do is for Mother Nature and it's Ecology! We use recyclabes reusables as well as eco-friendly products! We ensure that in the future, our children or even our children's children can still live without gas masks, live to see the forest and the animals!</p>
+    </div>
+
+    <div class="col-1">
+        <img src="https://i.imgur.com/y2ooDrS.jpg" alt="Plastic Sea" width="580" height="460">
+        <div class="text-box">
+            <h4>Preventing The Plastic Sea</h4>
+            <p>Preventing the ongoing phenomenon which is the plastic sea which destroys the sea and kills all living creature under the water. <br> ultimately living being and our source of food and the Ecology's food chain.</p>
+        </div>
+    </div>
+
+    <div class="col-1">
+        <img src="https://i.imgur.com/SJTh8BJ.jpg" alt="Green City" width="580" height="460">
+        <div class="text-box">
+            <h4>Cultivating The Green Habits</h4>
+            <p>Getting people to adopt green culture and to spread awareness of eco-friendly benefits. Both individual human benefits and the benefit of the whole universe. <br> Ultimately having a better sight to see and to have the eco system running as it suppose to be</p>
+        </div>
+    </div>
+
+    <div class="col-1">
+        <img src="https://i.imgur.com/XFCgceO.jpg" alt="Resource-Depletion" width="580" height="460">
+        <div class="text-box">
+            <h4>Ensuring The Sustainability</h4>
+            <p>Making sure what we see today can be seen and used in years to come! To cultivate the act of selflessness so that we do not deplete resources of the future. <br> ultimately using everything efficiently and effectively.</p>
+        </div>
+    </div>
+</div>
+</section>
 
   <div class="footer">
     <p>Created with <i class="fa fa-heart"></i> by Chris, Jason, Swadeep, Zhenrui</p>
