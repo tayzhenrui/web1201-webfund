@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="Home Page CSS.css">
+<body>
+
+  <navbar>
+    <div class="navbar">
+      <a class="active" href="#"><i class="fa fa-fw fa-home"></i> About Us</a>
+      <a href="https://tayzhenrui.github.io/web1201-webfund/contactus.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fa fa-fw fa-search"></i>Our Products</button>
+        <div class="dropdown-content">
+          <a href="https://tayzhenrui.github.io/web1201-webfund/ecoshoes.html">Eco-Shoes</a>
+          <a href="https://tayzhenrui.github.io/web1201-webfund/ecoshirt">Eco-Shirt</a>
+          <a href="https://tayzhenrui.github.io/web1201-webfund/ecophone-case.html">Eco-Phone Case</a>
+        </div>
+      </div>
+      <a href="https://tayzhenrui.github.io/web1201-webfund/purchase_form.html#"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+    </div>
+  </navbar>
+
+<div>
+  <section1>
+    <video autoplay muted loop id="myVideo">
+    <source src="https://i.imgur.com/iXREMWA.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  
+  <div class="content1">
+    <h1>Eco Warriors</h1>
+    <p>Welcome to the Green Team. We Reuse. We Reduce. We Recycle!</p>
+  </div>
+  </section1>
+</div>
+
+
+  <section>
+    <img class="mySlides" src="https://i.imgur.com/ht38eNn.png" style="width:100%">
+    <img class="mySlides" src="https://i.imgur.com/AU0LFwW.png" style="width:100%">
+    <img class="mySlides" src="https://i.imgur.com/tpwfS2V.png" style="width:100%">
+  </section>
+
+  <div class="icon-bar">
+    <a href="https://www.facebook.com/ecowarriors2019/" class="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="https://twitter.com/EcoWarriors18" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a href="https://gmail.com" class="google"><i class="fa fa-google"></i></a>
+    <a href="https://www.youtube.com/channel/UCE9w1KbAJZoUSx-NYKNOyfg?disable_polymer=true" class="youtube"><i class="fa fa-youtube"></i></a>
+  </div>
+
+  <div style text-align= "center">
+      <img src="https://i.imgur.com/HTwlc5P.gif" alt="Running man"  class="center"; width="300" height="300">
+      <div class="a">
+      <h1>Eco T-Shirt</h1>
+      <button class="button"><span>More Info. </span></button>
+  </div>
+
+  <div style text-align= "center">
+      <img src="https://static01.nyt.com/newsgraphics/2018/05/03/fancy-shoes/20b81748f36cf15d728351bcd9ef8826acc65b5a/run-desktop.gif" alt="Running Eco-Shoes"  class="center"; width="400" height="300">
+      <div class="a">
+      <h1>Eco-Shoes</h1>
+      <button class="button"><span>More Info. </span></button>
+  </div>    
+
+  <div style text-align= "center">
+    <img src="https://media.giphy.com/media/JrkoTguvodxiV3lnmI/giphy.gif" alt="Phone Case"  class="center"; width="300" height="300">
+    <div class="a">
+    <h1>Eco T-Shirt</h1>
+    <button class="button"><span>More Info. </span></button>
+  </div>
+
+  <div class="footer">
+    <p>Created with <i class="fa fa-heart"></i> by Chris, Jason, Swadeep, Zhenrui</p>
+  </div>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+</div>
+
+
+
+<script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+    </script>
+    
+
+</body>
+</html>
