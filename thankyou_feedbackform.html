@@ -426,7 +426,39 @@ hr {
     <a href="https://www.youtube.com/channel/UCE9w1KbAJZoUSx-NYKNOyfg?disable_polymer=true" class="youtube"><i class="fa fa-youtube"></i></a>
   </div>
 
- <br>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+    
+    <div class="bgimg">
+      <div class="middle">
+        <h1>THANK YOU FOR YOUR FEEDBACK!</h1>
+        <hr>
+        <p>Thank you for making the dream of a perfect website a reality</p>
+      </div>
+      <div class="bottomleft">
+        <p>EcoWarrior</p>
+      </div>
+    </div>
+  
+   <br>
   <footer class="footer-distributed">
 
     <div class="footer-left">
@@ -495,37 +527,5 @@ hr {
     </div>
 
 </footer>
-
-  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-
-<script>
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
-    
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
-      } else {
-        document.getElementById("myBtn").style.display = "none";
-      }
-    }
-    
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-    </script>
-    
-    <div class="bgimg">
-      <div class="middle">
-        <h1>THANK YOU FOR YOUR FEEDBACK!</h1>
-        <hr>
-        <p>Thank you for making the dream of a perfect website a reality</p>
-      </div>
-      <div class="bottomleft">
-        <p>EcoWarrior</p>
-      </div>
-    </div>
 </body>
 </html>
