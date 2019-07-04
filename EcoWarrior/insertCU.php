@@ -2,10 +2,9 @@
 $firstname =  $_POST['firstname'];
 $lastname = $_POST['lastname'];
 $email =  $_POST['email'];
-$productchosen = $_POST['productchosen'];
-$remark =  $_POST['remark'];
+$message =  $_POST['message'];
 $country = $_POST['country'];
-$shippingaddress = $_POST['shippingaddress'];
+$address = $_POST['address'];
 $postcode =  $_POST['postcode'];
 $city = $_POST['city'];
 
@@ -13,7 +12,7 @@ $city = $_POST['city'];
     $host = "localhost";
     $dbUsername = "root";
     $dbPassword = "";
-    $dbname = "purchasedb";
+    $dbname = "contactdb";
 
 
     //create connection for database
@@ -24,7 +23,7 @@ $city = $_POST['city'];
         } else {
             
         //create database
-        $sql = "CREATE DATABASE purchasedb";
+        $sql = "CREATE DATABASE contactdb";
 
         if ($conn->query($sql) === TRUE) {
             echo "Database created successfully";
@@ -42,15 +41,14 @@ $city = $_POST['city'];
         } else {
 
         //sql to create table
-        $sql = "CREATE TABLE purchase (
+        $sql = "CREATE TABLE contactus (
             ID INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
             firstname VARCHAR(20) NOT NULL,
             lastname VARCHAR(20) NOT NULL,
             email VARCHAR(40) NOT NULL,
-            productchosen VARCHAR(20) NOT NULL,
-            remark VARCHAR(20) NOT NULL,
+            message VARCHAR(200) NOT NULL,
             country VARCHAR(20) NOT NULL,
-            shippingaddress VARCHAR(400) NOT NULL,
+            address VARCHAR(400) NOT NULL,
             postcode VARCHAR(10) NOT NULL,
             city VARCHAR(20) NOT NULL,
             reg_date TIMESTAMP
@@ -69,15 +67,15 @@ $city = $_POST['city'];
         $conn = mysqli_connect ($host, $dbUsername, $dbPassword, $dbname);
 
 
-if (!empty($firstname) || !empty($lastname) || !empty($email) || !empty($productchosen) || !empty($remark) || !empty($country) || !empty($shippingaddress) || !empty($postcode) || !empty($city)) {
+if (!empty($firstname) || !empty($lastname) || !empty($email) || !empty($message) || !empty($country) || !empty($address) || !empty($postcode) || !empty($city)) {
 
         if (mysqli_connect_error()) {
             die('Connect Error('.mysqli_connect_errno().')'.mysqli_connect_error());
         } else {
 
-            $SELECT = "SELECT email From purchase Where email = ? Limit 1";
-            $INSERT = "INSERT Into purchase (firstname, lastname, email, productchosen, remark, country, shippingaddress, postcode, city)
-            values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            $SELECT = "SELECT email From contactus Where email = ? Limit 1";
+            $INSERT = "INSERT Into contactus (firstname, lastname, email, message, country, address, postcode, city)
+            values (?, ?, ?, ?, ?, ?, ?, ?)";
 
             //Prepare statement
             $stmt = $conn->prepare($SELECT);
@@ -91,7 +89,7 @@ if (!empty($firstname) || !empty($lastname) || !empty($email) || !empty($product
                 $stmt->close();
             
                 $stmt = $conn->prepare($INSERT);
-                $stmt->bind_param("sssssssis", $firstname, $lastname, $email, $productchosen, $remark, $country, $shippingaddress, $postcode, $city);
+                $stmt->bind_param("ssssssis", $firstname, $lastname, $email, $message, $country, $address, $postcode, $city);
                 $stmt->execute();
                 echo "New record inserted successfully";
             } else {
@@ -107,7 +105,7 @@ if (!empty($firstname) || !empty($lastname) || !empty($email) || !empty($product
 }
 
 /* Redirect browser */
-header("Location: https://tayzhenrui.github.io/web1201-webfund/thankyou_purchaseform.html");
+header("Location: https://tayzhenrui.github.io/web1201-webfund/thankyou_feedbackform.html");
  
 /* Make sure that code below does not get executed when we redirect. */
 exit;
